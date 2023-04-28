@@ -1,0 +1,13 @@
+package com.spring.data.jpa.SpringDataJPA.Repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.spring.data.jpa.SpringDataJPA.Entity.Student;
+
+public interface StudentRepository extends JpaRepository<Student, Long>{
+
+	List<Student> findByNameContaining(String name);
+}
+
